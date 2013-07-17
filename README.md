@@ -1,4 +1,0 @@
-kyototycoon-objects
-===================
-
-Kyototycoon Objects

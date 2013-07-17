@@ -1,0 +1,42 @@
+== KyotoTycoon Objects
+
+== DESCRIPTION
+
+This Ruby gem provide a way to use KyotoTycoon as Ruby objects
+
+== INSTALLATION & SETUP
+
+  $ gem install kyototycoon-objects
+
+or add this to your Gemfile
+
+  gem 'kyototycoon-objects'
+
+== HOW TO USE
+
+* For default, KyotoTycoon will connect to localhost:1978. If you need to connect to a remote server or a different port, create a file config/initializers/kyototycoon.rb with
+
+    require 'kyototycoon'
+    KyotoTycoon.configure(:default, "localhost", 1978) { }
+
+* For counters
+
+  In a class, make a declaration like
+
+    class Product
+      include KyotoTycoon::Objects
+      kyototycoon_counter :page_views, start: 0
+    end
+
+  And each instance of this class having 2 methods
+
+    p = Product.new.page_views
+    p.page_views = 1
+
+== CONTRIBUTORS
+
+* [ChiKim](http://github.com/chikim)
+* [TungD](http://github.com/tungd)
+* [DaiNghiaVoTinh](http://github.com/dainghiavotinh)
+
+== COPYRIGHT (c) 2013 Framgia Vietnam INC
