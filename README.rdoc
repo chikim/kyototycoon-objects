@@ -1,4 +1,4 @@
-== KyotoTycoon Objects
+== KyotoTycoon Objects {<img src="https://travis-ci.org/chikim/kyototycoon-objects.png" />}[https://travis-ci.org/chikim/kyototycoon-objects]
 
 == DESCRIPTION
 
@@ -35,8 +35,8 @@ or add this to your Gemfile
 
 == CONTRIBUTORS
 
-* [ChiKim](http://github.com/chikim)
-* [TungD](http://github.com/tungd)
-* [DaiNghiaVoTinh](http://github.com/dainghiavotinh)
+* ChiKim[http://github.com/chikim]
+* TungD[http://github.com/tungd]
+* DaiNghiaVoTinh[http://github.com/dainghiavotinh]
 
 == COPYRIGHT (c) 2013 Framgia Vietnam INC

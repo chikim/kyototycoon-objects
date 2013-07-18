@@ -1,0 +1,25 @@
+language: ruby
+rvm:
+  - "1.9.3"
+  - "2.0.0"
+before_install:
+  - cd ../
+  - wget http://fallabs.com/kyotocabinet/pkg/kyotocabinet-1.2.76.tar.gz
+  - tar xvfz kyotocabinet-1.2.76.tar.gz
+  - cd kyotocabinet-1.2.76
+  - ./configure && make && sudo make install
+  - cd ../
+  - wget http://fallabs.com/kyototycoon/pkg/kyototycoon-0.9.56.tar.gz
+  - tar xvfz kyototycoon-0.9.56.tar.gz
+  - cd kyototycoon-0.9.56
+  - ./configure && make && sudo make install
+  - cd ../
+  - gem install active_support
+  - gem install kyototycoon
+  - gem install rspec
+  - cd kyototycoon-objects/
+  - if [ "`grep '/usr/local/lib' /etc/ld.so.conf`" == "" ] ; then sudo sh -c 'echo "include /usr/local/lib" >> /etc/ld.so.conf' ; fi
+  - sudo ldconfig
+  - ktserver &
+script:
+  - rspec spec/
