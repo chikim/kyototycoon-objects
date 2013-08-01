@@ -7,6 +7,7 @@ Gem::Specification.new do |s|
   s.authors     = ["ChiKim","TungD","DaiNghiaVoTinh"]
   s.email       = "huy.nguyendang@hotmail.com"
   s.homepage    = "http://github.com/chikim/kyototycoon-objects"
+  s.license     = "MIT"
   s.files       = [
     "lib/kyototycoon-objects.rb",
     "lib/kyototycoon/objects.rb",
